@@ -3,6 +3,8 @@ define :dnsmasq,
 :dns_servers => [ "8.8.8.8", "8.8.4.4" ],
 :dhcp_range => ["10.0.0.1", "10.0.0.255"],
 :dhcp_lease => "infinite",
+:dhcp_router => nil,
+:dhcp_dns_servers => [ "8.8.8.8", "8.8.4.4" ], 
 :ntp_servers => nil,
 :enable_tftp => true,
 :fixed_address_hosts => nil do
@@ -20,7 +22,9 @@ define :dnsmasq,
               :dns_servers => params[:dns_servers],
               :interfaces => params[:interfaces],
               :dhcp_range => params[:dhcp_range],
-              :dhcp_lease => params[:dhcp_lease]
+              :dhcp_lease => params[:dhcp_lease],
+              :dhcp_router => params[:dhcp_router],
+              :dhcp_dns_servers => params[:dhcp_dns_servers]
               )
   end
 
