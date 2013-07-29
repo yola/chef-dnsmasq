@@ -7,3 +7,7 @@ interface=<%= i %>
 <% end -%>
 
 dhcp-range=<%= @dhcp_range.join(",") -%>,<%= @dhcp_lease %>
+<% if @dhcp_router then -%>
+dhcp-option=option:router,<%= @dhcp_router %>
+<% end -%>
+dhcp-option=option:dns-server,<%= @dhcp_dns_servers.join(",") -%>
