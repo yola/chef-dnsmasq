@@ -3,7 +3,7 @@ package "dnsmasq" do
 end
 
 service node[:dnsmasq][:service] do
-  action [:enable, :start]
+  action node[:dnsmasq][:start] ? [:enable, :start] : :enable
 end
 
 directory node[:dnsmasq][:conf_dir] do

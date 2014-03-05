@@ -5,3 +5,4 @@ default["dnsmasq"]["conf_dir"] = "/etc/dnsmasq.d"
 
 default["dnsmasq"]["tftp_root"] = "/var/ftpd"
 default["dnsmasq"]["dhcp_boot_file"] = "pxelinux.0"
+default["dnsmasq"]["start"] = true
