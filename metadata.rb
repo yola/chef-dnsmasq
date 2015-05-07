@@ -1,3 +1,4 @@
+name             "dnsmasq"
 maintainer       "Yola"
 maintainer_email "ops@yola.com"
 license          "Apache 2.0"
