@@ -10,4 +10,6 @@ dhcp-range=<%= @dhcp_range.join(",") -%>,<%= @dhcp_lease %>
 <% if @dhcp_router then -%>
 dhcp-option=option:router,<%= @dhcp_router %>
 <% end -%>
+<% if !@dhcp_dns_servers.empty? then -%>
 dhcp-option=option:dns-server,<%= @dhcp_dns_servers.join(",") -%>
+<% end -%>
